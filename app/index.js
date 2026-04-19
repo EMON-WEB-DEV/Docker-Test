@@ -3,8 +3,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const os = require('os');
 
-const hostname = os.hostname();
-const platform = os.platform();
+const hostname =  process.env.HOSTNAME || os.hostname();
+const platform = process.env.PLATFORM || os.platform();
 
 
 app.get('/', (req, res) => {
